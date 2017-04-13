@@ -27,13 +27,12 @@ import static org.springframework.session.FindByIndexNameSessionRepository.PRINC
  * <p>
  * Does not support {@link #getAllPrincipals()}, since that information is not available.
  */
-@Component
+
 public class SpringSessionBackedSessionRegistry implements SessionRegistry {
 
     private FindByIndexNameSessionRepository<? extends ExpiringSession> sessionRepository;
 
-    @SuppressWarnings("SpringJavaAutowiringInspection")
-    @Autowired
+
     public SpringSessionBackedSessionRegistry(FindByIndexNameSessionRepository<? extends ExpiringSession> sessionRepository) {
         this.sessionRepository = sessionRepository;
     }

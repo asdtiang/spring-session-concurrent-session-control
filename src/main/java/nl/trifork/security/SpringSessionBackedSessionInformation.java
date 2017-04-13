@@ -17,7 +17,10 @@ import static org.springframework.session.FindByIndexNameSessionRepository.PRINC
  * since this session information contains only derived data and is not the authoritative source.
  */
 class SpringSessionBackedSessionInformation extends SessionInformation {
-
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8068129229411852317L;
     /**
      * Tries to determine the principal's name from the given Session.
      *
